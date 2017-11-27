@@ -5,6 +5,10 @@
         "ngAnimate",
         "ngSanitize",
         "app.login",
-        "app.dashboard"
+        "app.dashboard",
+        "app.users",
+        "app.products",
+        "app.categories",
+        "ngMessages"
     ]);
 })();

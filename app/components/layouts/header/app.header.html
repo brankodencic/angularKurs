@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Simple App" >
+      </a>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-class="{'active': location.path() === '/'+$item.state}" ng-repeat="($i, $item) in mainMenu">
+           <a ui-sref="{{$item.state}}">{{$item.menuItem}}</a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

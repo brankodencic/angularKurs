@@ -1,0 +1,6 @@
+[
+    {"menuItem":"Dashboard", "state":"dashboard"},
+    {"menuItem":"Users", "state":"users"},
+    {"menuItem":"Categories", "state":"categories"},
+    {"menuItem":"Products", "state":"products"}
+]

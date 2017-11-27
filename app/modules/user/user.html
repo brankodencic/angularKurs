@@ -1,0 +1,85 @@
+<div class="row" style="margin-top:20px">
+    <h1 class="col-md-6 col-md-offset-3">
+    USER!
+    </h1>
+
+    
+    <form name="userForm" novalidate ng-submit="createNewUser($event)">
+      <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input ng-model="userData.Email" required minlength="4" type="email" name="Email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+
+            <div ng-messages="userForm.Email.$error" ng-if="userForm.$submitted || userForm.Email.$dirty">
+                <div class="alert alert-danger" ng-message="required">Please enter a value for this field.</div>
+                <div class="alert alert-danger" ng-message="minlength">This field can be at most 15 characters long.</div>
+                <div class="alert alert-danger" ng-message="email">This field must be a valid email address.</div>
+            </div>
+      </div>
+        
+        <div class="form-group">
+            <label for="Username">Username</label>
+            <input ng-model="userData.Username" required minlength="4" type="text" name="Username" class="form-control" id="Username" placeholder="Username">
+
+            <div ng-messages="userForm.Username.$error" ng-if="userForm.$submitted || userForm.Username.$dirty">
+                <div class="alert alert-danger" ng-message="required">Please enter a value for this field.</div>
+                <div class="alert alert-danger" ng-message="minlength">This field can be at most 15 characters long.</div>
+            </div>
+      </div>
+
+      <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input ng-model="userData.Password" required minlength="4" type="password" name="Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+            <div ng-messages="userForm.Password.$error" ng-if="userForm.$submitted || userForm.Password.$dirty">
+                <div class="alert alert-danger" ng-message="required">Please enter a value for this field.</div>
+                <div class="alert alert-danger" ng-message="minlength">This field can be at most 15 characters long.</div>
+                <div class="alert alert-danger" ng-message="password">This field must be a valid password.</div>
+            </div>
+      </div>
+
+      <div class="form-group">
+            <label for="FirstName">First name</label>
+            <input ng-model="userData.FirstName" required minlength="4" type="text" name="FirstName" class="form-control"  id="FirstName">
+
+            <div ng-messages="userForm.FirstName.$error" ng-if="userForm.$submitted || userForm.FirstName.$dirty">
+                <div class="alert alert-danger" ng-message="required">Please enter a value for this field.</div>
+                <div class="alert alert-danger" ng-message="minlength">This field can be at most 15 characters long.</div>
+                <div class="alert alert-danger" ng-message="text">This field must be a valid text.</div>
+            </div>
+      </div>
+
+    <div class="form-group">
+        <label for="LastName">Last name</label>
+        <input ng-model="userData.LastName" required minlength="4" type="text" name="LastName" class="form-control"  id="LastName">
+
+        <div ng-messages="userForm.LastName.$error" ng-if="userForm.$submitted || userForm.LastName.$dirty">
+            <div class="alert alert-danger" ng-message="required">Please enter a value for this field.</div>
+            <div class="alert alert-danger" ng-message="minlength">This field can be at most 15 characters long.</div>
+            <div class="alert alert-danger" ng-message="text">This field must be a valid text.</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Role">Role</label>
+        <select ng-model="userData.Role" required type="text" name="Role" class="form-control" id="Role">
+            <option>Admin</option>
+            <option>User</option>
+        </select>
+    </div>
+
+    <div ng-messages="userForm.Role.$error" ng-if="userForm.$submitted || userForm.Role.$dirty">
+        <div class="alert alert-danger" ng-message="required">Please enter a value for this field.</div>
+        <div class="alert alert-danger" ng-message="minlength">This field can be at most 15 characters long.</div>
+        <div class="alert alert-danger" ng-message="text">This field must be a valid text.</div>
+    </div>
+    <input type="submit" class="btn btn-default" value="Submit"/>
+    </form>
+</div>
+
+
+<pre>{{ userData | json}}</pre>
+
+
+<pre>
+{{ userForm | json }}
+</pre>
